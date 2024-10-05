@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kapitel 4 Øvelse 2</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+</head>
+
+
+<body>
+    <script>
+        // Tegn en cirkel midt på skærmen. Hvis musen bevæger sig til højre for cirklens centrum bliver den til et rektangel. 
+        //Hvis den bevæger sig til venstre for bliver den igen en cirkel.
+
+        function setup(){
+            createCanvas(windowWidth, windowHeight);
+            background(0);
+            circle(windowWidth/2, windowHeight/2, 100);
+        }
+
+        function draw(){;
+            if (mouseX>windowWidth/2){
+                fill(255);
+                rect(windowWidth/2-50, windowHeight/2-50, 100);
+            }
+            if (mouseX<windowWidth/2){
+                fill(255);
+                background(0)
+                circle(windowWidth/2, windowHeight/2, 100);
+            }
+        }
+    </script>
+</body>
+</html>
