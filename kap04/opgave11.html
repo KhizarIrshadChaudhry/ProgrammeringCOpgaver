@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kapitel 4 Øvelse 10</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+</head>
+
+
+<body>
+    <script>
+        //Udvid programmet fra forrige opgave så det tilsvarende også rummer en cirkelformet mus, der kan bevæge sig op og ned, til højre og venstre men ved brug af tasterne w,a, s og d.
+
+        function setup(){
+            circleX = random(25,windowWidth-50);
+            circleY = random(25,windowHeight-25);
+            createCanvas(windowWidth, windowHeight);
+            background(0);
+            fill(255,0,0);
+            circle(circleX, circleY,50);
+
+        }
+        function draw(){
+            //65, 68, 87 og 83 er keykodes til hhv. w, a, s og d
+            if (keyIsDown(LEFT_ARROW) || keyIsDown(65)) {
+                circleX -= 5;
+            }
+
+            if (keyIsDown(RIGHT_ARROW)| keyIsDown(68)) {
+                circleX += 5;
+            }
+
+            if (keyIsDown(UP_ARROW) | keyIsDown(87)) {
+                circleY -= 5;
+            }
+
+            if (keyIsDown(DOWN_ARROW) | keyIsDown(83)) {
+                circleY += 5;
+            }
+            background(0);
+            circle(circleX, circleY, 50)
+        }
+    </script>
+</body>
+</html>

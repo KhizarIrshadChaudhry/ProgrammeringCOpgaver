@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kapitel 4 Øvelse 9</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+</head>
+
+
+<body>
+    <script>
+        //Forklar og forstå hvad følgende kode gør (hvad betyder mon keyIsDown):
+        let x = 100; 
+        let y = 100;
+
+        function setup() {
+            createCanvas(512, 512);
+            fill(255, 0, 0);
+        }
+
+        function draw() {
+        if (keyIsDown(LEFT_ARROW)) {
+            x -= 5;
+        }
+
+        if (keyIsDown(RIGHT_ARROW)) {
+            x += 5;
+        }
+
+        if (keyIsDown(UP_ARROW)) {
+            y -= 5;
+        }
+
+        if (keyIsDown(DOWN_ARROW)) {
+            y += 5;
+        }
+
+        clear();
+        circle(x, y, 50);
+        }
+        //Programmet får cirklen til at bevæge sig i 2D dimmensioner. 
+        //Funktionen 'keyIsDown' retunere en boolean value. Den er true/false hvis den parset key i funktionen holdes nede
+    </script>
+</body>
+</html>

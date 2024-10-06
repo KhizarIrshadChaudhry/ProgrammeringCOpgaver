@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kapitel 4 Øvelse 10</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+</head>
+
+
+<body>
+    <script>
+        //Lav et program der indsætter en cirkelformet mus et tilfældigt sted på skærmen og som kan bevæges op og ned, til højre og venstre vha piltasterne.
+        
+        function setup(){
+            circleX = random(25,windowWidth-50);
+            circleY = random(25,windowHeight-25);
+            createCanvas(windowWidth, windowHeight);
+            background(0);
+            fill(255,0,0);
+            circle(circleX, circleY,50);
+
+        }
+        function draw(){
+            if (keyIsDown(LEFT_ARROW)) {
+                circleX -= 5;
+            }
+
+            if (keyIsDown(RIGHT_ARROW)) {
+                circleX += 5;
+            }
+
+            if (keyIsDown(UP_ARROW)) {
+                circleY -= 5;
+            }
+
+            if (keyIsDown(DOWN_ARROW)) {
+                circleY += 5;
+            }
+            background(0);
+            circle(circleX, circleY, 50)
+        }
+    </script>
+</body>
+</html>
