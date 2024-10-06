@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kapitel 4 Øvelse 8</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+</head>
+
+
+<body>
+    <script>
+    //Lav et program, som tegner et A på kanvas når du trykker på A. Og når du trykker på V tegnes et V.
+    function setup() { 
+        createCanvas(120, 120); 
+    } 
+    function draw() { 
+        background(204); 
+        if (keyIsPressed) {  //'keyIsPressed' er en boolean varaibel, der bliver true når en knap holdes nede
+            if ((key == 'a') || (key == 'A')) {
+                  //Hvis knappen er h 
+                  line(35, 60, 65, 60);
+            } 
+            if ((key == 'n') || (key == 'N')) { 
+                line(90, 18, 80, 100); } //Hvis knappen er n
+        } 
+        //De to andre lodrette knapper
+        line(50, 20, 20, 100); 
+        line(50, 20, 80, 100);       
+    } 
+    </script>
+</body>
+</html>

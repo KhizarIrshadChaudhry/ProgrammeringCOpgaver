@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kapitel 4 Øvelse 4</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+</head>
+
+
+<body>
+    <script>
+        // 4 a) Forklar hvad følgende kode gør (hvad betyder width og height?):
+        function setup() { 
+            createCanvas(600, 400);
+        } 
+
+        function draw() { 
+            background(220);
+            fill(255,0,0);
+            noStroke();
+            if (mouseX < width/3) {
+                rect(0, 0, width/3, height);
+            }
+            else if (mouseX <= width*2/3) {
+                rect(width/3, 0, width/3, height);
+            }
+            else {
+                rect(width*2/3, 0, width/3, height);
+            }
+        }
+        //Koden deler canvas op i 3 dele, ved hjælå af de tre if-else statements.
+        //Baseret på hvilken af de 3 dele mussen er, så laver koden en recantagel på den del 
+        //Her bruges variabelen width og height som størrelserne af canvas. 
+        //I dette eksempel er width og height hhv. 600 og 400
+    </script>
+</body>
+</html>
