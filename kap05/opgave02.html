@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kapitel 4 Øvelse 10</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+</head>
+
+
+<body>
+    <script>
+        function setup() {
+        //Omskriv koden i opgave 1, så den benytter en for-løkke. 
+        //Udvid herefter en af de to løkker, 
+        //så cirkler tegnes i venstre halvdel hvis i er lige, 
+        //og hvis i er ulige tegnes cirkler i højre halvdel.
+
+          createCanvas(400, 400);
+          background(100);
+            for (let i=0; i<100; i++)
+                {
+                    if (i%2==0){
+                        fill(255,0,0);
+                        let y=random(400);
+                        let r = random(100);
+                        let x=random(200-r);
+                        circle(x,y,r);
+                        fill(0);
+                        text(i,x,y);
+                    }
+                    else{
+                        fill(0, 255, 0);
+                        let y=random(400);
+                        let r = random(100);  
+                        let x=random(200+r, 400);                  
+                        circle(x,y,r);
+                        fill(0);
+                        text(i,x,y);
+                    }
+                }
+            }
+        
+    </script>
+</body>
+</html>
