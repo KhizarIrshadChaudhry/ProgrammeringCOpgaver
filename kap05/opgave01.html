@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kapitel 4 Øvelse 10</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+</head>
+
+
+<body>
+    <script>
+        function setup() {
+        //Forklar hvad følgende kode gør:
+          let i = 0; //Declaration og tildelse 
+          createCanvas(400, 400);
+            while(i<100)
+                {
+                let x=random(400)
+                let y=random(400)
+                let r = random(100)
+                circle(x,y,r)
+                text(i,x,y)
+                i=i+1
+            }
+        }
+        //Koden iterere 100 gange, og cirkler med tilfældige radiuser tilfældige steder
+        //X og y positionen bliver tildelt tilfældigt med et værdi fra 1-400
+        //radius bliver tildelt tilfældigt med et værdi fra 1-100
+        
+    </script>
+</body>
+</html>
