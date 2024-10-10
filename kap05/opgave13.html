@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kapitel 4 Øvelse 10</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+</head>
+
+
+<body>
+    <script>
+      let angle = 0;
+      let x = 0;
+      let y = 150; 
+
+      function setup() {
+        createCanvas(600, 600);
+        angleMode(DEGREES);
+        fill("pink"); 
+        noStroke(); 
+      }
+
+      function draw() {
+        background("yellow");
+        translate(x,y)
+        rotate(angle);
+        ellipseMode(CENTER);
+        
+        x+=2 //X hastigheden
+        angle+=4 //Rotationshastigheden
+        for (var row=3; row <= width; row = row + 50){
+          for (var col=3; col <= height; col = col + 50){
+            ellipse(row,col,20,20);
+          }
+        }
+        //Koden laver elipser i en matrix looking grid og rotere den
+}
+    </script>
+</body>
+</html>

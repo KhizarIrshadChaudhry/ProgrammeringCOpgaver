@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kapitel 4 Øvelse 10</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+</head>
+
+
+<body>
+    <script>
+      //Tegn 10 forskellige ellipser forskellige steder på skærmen både ved brug af while og for
+        function setup() {
+          createCanvas(600, 600);
+          background(100);
+          //ved brug af for
+          for (let i=0;i<10;i++){
+            ellipse(random(0, 600), random(0, 600), random(50), random(50));
+          }
+
+          //Ved brug af while
+          let i=0;
+          while (i<10){
+            ellipse(random(0, 600), random(0, 600), random(50), random(50));  
+            i++;         
+          }
+        }
+    </script>
+</body>
+</html>

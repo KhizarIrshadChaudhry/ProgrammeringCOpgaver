@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kapitel 4 Øvelse 10</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+</head>
+
+
+<body>
+    <script>
+        function setup() {
+        //Brug en while-løkke til at tegne de ulige tal mellem 0 og 100 
+        //tilfældige steder på skærmen med farven blå.
+          createCanvas(600, 600);
+          background(100);
+          let i=0;
+          while (i<100) {
+            i++;
+            if (i%2!=0){
+                let x=random(600);
+                let y=random(600);
+                fill(255, 0, 0);
+                text(i,x,y);
+                console.log(i)
+            }
+          }
+        }
+    </script>
+</body>
+</html>

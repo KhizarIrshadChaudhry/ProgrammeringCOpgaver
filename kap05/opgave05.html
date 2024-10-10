@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kapitel 4 Øvelse 10</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+</head>
+
+
+<body>
+    <script>
+        //Tegn en cirkel i centrum og dernæst en ny cirkel, som er en smule større men med samme centrum. 
+        //Gør det 30 gange ved brug af både for og while. Det er ikke forventet at du laver en animation. 
+        //Overvej forskellen på løkker og draw. 
+        //Vi opfordrer at du overvejer at skrive koden i setup eller skriver noLoop() i setup, hvis du vil skrive koden i draw.
+
+        function setup() {
+          createCanvas(600, 600);
+          background(100);
+          let i = 50;
+          //gjort ved brug af while
+          while (i<150){
+            fill(255, 0, 0, 30);
+            circle(width/2, height/2, i);
+            i+=10;
+          }
+          //Gjort ved brug af for
+          for (let i=50; i<150; i+=10){
+            fill(255, 0, 0, 30)
+            circle(width/2, height/2, i);
+          }
+
+        }
+    </script>
+</body>
+</html>
