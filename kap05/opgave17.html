@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kapitel 4 Øvelse 16</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+</head>
+
+
+<body>
+    <script>
+      //Lav en løkke, der tilføje de lige tal i en liste og de ulige tal i en anden liste. 
+      //Skriv de lige tal tilfældige steder i højre side af kanvas og de ulige tal, tilfældige steder, i venstre side af kanvas.
+
+      function setup() {
+        createCanvas(400, 400);
+        background(1);
+        uligeListe = [];
+        ligeListe = [];
+
+        for (let i=0; i<100; i++){
+          if (i%2==0){
+            ligeListe.push(i)
+          }else{
+            uligeListe.push(i)
+          }
+        }
+
+        for (let i=0; i<ligeListe.length; i++){
+          fill(255,0,0);
+          let y=random(400);
+          let r = random(100);
+          let x=random(200-r);
+          text(ligeListe[i],x,y);          
+        }
+        for (let i=0; i<uligeListe.length; i++){
+          fill(0, 255, 0);
+          let y=random(400);
+          let r = random(100);  
+          let x=random(200, 400);                  
+          text(uligeListe[i],x,y);         
+        }
+      }
+    </script>
+</body>
+</html>
