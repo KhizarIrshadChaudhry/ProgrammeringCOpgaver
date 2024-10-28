@@ -3,12 +3,12 @@
 //Så bascially 100 fakultet
 
 function fakultet(int){
-  let sum = 1;
+  let sum = 0;
   for (let i=1; i<=int; i++) {
-    sum = sum*i;
+    sum += i;
   }
   console.log(sum);
 }
 
 
-fakultet(2);
+fakultet(100);
